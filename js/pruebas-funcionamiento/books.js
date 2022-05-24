@@ -206,43 +206,6 @@ const me = document.querySelector("#mios");
 
 if (document.title == "Mi Perfil") me.addEventListener("click", getBooks);
 
-/*window.addEventListener("resize", () => {
-  //Small
-  console.log(outstanding.childNodes.length);
-  if (window.innerWidth >= 576 && window.innerWidth <= 720) {
-    console.log("is small");
-    for (var i = 3; i < outstanding.childNodes.length; i++) {
-      setResponsive(window.innerWidth, outstanding.childNodes[i]);
-    }
-  }
-
-  //Medium
-  if (window.innerWidth >= 720 && window.innerWidth <= 992) {
-    console.log("is medium");
-
-    for (var i = 3; i < outstanding.childNodes.length; i++) {
-      setResponsive(window.innerWidth, outstanding.childNodes[i]);
-    }
-  }
-
-  //Large
-  if (window.innerWidth >= 992 && window.innerWidth <= 1200) {
-    console.log("is large");
-
-    for (var i = 3; i < outstanding.childNodes.length; i++) {
-      setResponsive(window.innerWidth, outstanding.childNodes[i]);
-    }
-  }
-  //Extra Large
-  if (window.innerWidth >= 1200) {
-    console.log("is extra large");
-
-    for (var i = 3; i < outstanding.childNodes.length; i++) {
-      setResponsive(window.innerWidth, outstanding.childNodes[i]);
-    }
-  }
-});*/
-
 function getBooks(e) {
   console.log(e.target);
   //Si no esta logueado y hace clickc en contactar
@@ -283,16 +246,25 @@ function clickAvatar() {
 
 function createCardsBooks(data, container) {
   const principalCol = document.createElement("div");
-  principalCol.classList.add("col-md-4", "col-lg-4");
+  principalCol.classList.add(
+    "col-10",
+    "offset-2",
+    "col-sm-9",
+    "offset-sm-3",
+    "col-md-5",
+    "offset-md-1",
+    "col-xl-3",
+    "offset-xl-0",
+    "py-3"
+  );
 
   const card = document.createElement("div");
   card.classList.add("card");
-  card.style.width = "20rem";
+  card.style.width = "18rem";
   card.setAttribute("id", data.id);
 
   const imageCard = document.createElement("img");
   imageCard.setAttribute("src", data.imgPath);
-  imageCard.setAttribute("width", "100");
   imageCard.setAttribute("height", "350");
   imageCard.classList.add("card-img-top");
 
