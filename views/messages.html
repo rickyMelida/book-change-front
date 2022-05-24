@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Mensajes</title>
+</head>
+
+<body>
+
+    <!--------------------  Header  ------------------------------->
+    <header id="home">
+        <nav class="navbar navbar-expand-lg navbar-light  bg-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html" title="Inicio">
+                    <img src="../img/book.png" alt="" width="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" id="home-item" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Libros
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" id="highlighted-item" href="../index.html#destacados">Destacados</a></li>
+                                <li><a class="dropdown-item" id="recent-item" href="../index.html#recientes">Recientes</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" id="others-item" href="../index.html#otros">Otros</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contacts-item" href="./contacts.html">Contactos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="my-book-item" href="./myBooks.html">Mis Libros</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <span class="mx-3">
+                        <a href="./favorites.html" id="favorites-item" title="Favoritos">
+                            <img src="../img/wish_list.svg" width="30" alt="">
+                        </a>
+                    </span>
+                    <span class="mx-3">
+                        <a href="" id="messages-item" title="Mensajes">
+                            <img src="../img/message.svg" width="30" alt="">
+                        </a>
+                    </span>
+    
+                    <span class="mx-1 dropdown">
+                        <div class="dropdown" style="float:left;">
+                            
+                            <a href="" class="dropbtn" id="my-profile-item" title="Mi Perfil">
+                                <img src="../img/user.svg" width="30" alt="">
+                            </a>
+                            <div class="dropdown-content" id="profile-option" >
+                                <a href="#">Mi Perfil</a>
+                                <a href="#">Cerrar Sesion</a>
+                            </div>
+                        </div>
+                        
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--------------------  Messages  ------------------------------->
+    <div class="container">
+        <hr>
+        <div class="row">
+            <!--------------------  Contacts with writting  ------------------------------->
+            <div class="col-md-3 middle bg-light">
+                <!--------------------  Info User  ---------------------->
+                <div class="row my-3">
+                    <div class="col-md-2">
+                        <div class="avatar-sm">
+                            <img src="../img/avatar.svg" alt="Avatar"  width="30">
+                        </div>
+                    </div>
+                    <div class="col-md-10 ml-2">
+                        <strong class="d-block pt-3">Ricardo Melida</strong>
+                    </div>
+                </div>
+
+                <!--------------------  Field Search  ------------------->
+                <div class="row">
+                    <div class="col-md-12">
+                        <form>
+                            <div class="form-group">
+                                <input type="search" class="form-control" id="search-chat" placeholder="&#xF002; Buscar" style="font-family:Arial, FontAwesome">
+                              </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!--------------------  Contacts Chats  ------------------>
+                <div class="row my-4">
+                    <div class="col-md-12">
+                        <!--------------------  Chat 1  ------------------>
+                        <div class="row my-4">
+                            <div class="col-md-12">
+                                <div class="row p-2">
+                                    <div class="col-md-2">
+                                        <div class="avatar-sm">
+                                            <img src="../img/avatar.svg" alt="Avatar"  width="30">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10 ml-2">
+                                        <strong class="d-block">Anahi Encina</strong>
+                                        <span>
+                                            Lorem ipsum dolor
+                                        </span>
+                                        <span class="badge badge-light">4</span> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--------------------  End Chat 1 --------------->
+
+                        <!--------------------  Chat 2  ------------------>
+                        <div class="row my-4">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="avatar-sm">
+                                            <img src="../img/avatar.svg" alt="Avatar"  width="30">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10 ml-2">
+                                        <strong class="d-block">Nelly Ruiz Diaz</strong>
+                                        <span>
+                                            Lorem ipsum dolor
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--------------------  End Chat 2 --------------->
+
+                        <!--------------------  Chat 3  ------------------>
+                        <div class="row my-4">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="avatar-sm">
+                                            <img src="../img/avatar.svg" alt="Avatar"  width="30">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10 ml-2">
+                                        <strong class="d-block">Jose Franco</strong>
+                                        <span>
+                                            Lorem ipsum dolor
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--------------------  End Chat 3 --------------->
+
+                        <!--------------------  Chat 4  ------------------>
+                        <div class="row my-4">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="avatar-sm">
+                                            <img src="../img/avatar.svg" alt="Avatar"  width="30">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10 ml-2">
+                                        <strong class="d-block">Samuel Frutos</strong>
+                                        <span>
+                                            Lorem ipsum dolor
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--------------------  End Chat 4 --------------->
+
+                        <!--------------------  Chat 5  ------------------>
+                        <div class="row my-4">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="avatar-sm">
+                                            <img src="../img/avatar.svg" alt="Avatar"  width="30">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10 ml-2">
+                                        <strong class="d-block">Eduardo Esquivel</strong>
+                                        <span>
+                                            Lorem ipsum dolor
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--------------------  End Chat 5 ---------------->
+
+
+                        <!--------------------  Chat 6  ------------------>
+                        <div class="row my-4">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="avatar-sm">
+                                            <img src="../img/avatar.svg" alt="Avatar"  width="30">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10 ml-2">
+                                        <strong class="d-block">Luis Cabrera</strong>
+                                        <span>
+                                            Lorem ipsum dolor
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--------------------  End Chat 6 ----------------->
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!--------------------  Chats  ------------------------------->
+            <div class="col-md-9">
+                <!--------------------  Info Contact User  --------------->
+                <div class="row my-3">
+                    <div class="col-md-1">
+                        <div class="avatar-sm name-chat">
+                            <img src="../img/avatar.svg" alt="Avatar"  width="30">
+                        </div>
+                    </div>
+                    <div class="col-md-10 mr-3">
+                        <strong class="d-block pt-3">Anahi Encina</strong>
+                    </div>
+                </div>
+                <hr>
+                <!--------------------  Chat  ---------------------------->
+                <div class="row">
+                    <div class="col-md-12 m-2">
+                        <p class="m-2">
+
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aliquid, quis maiores temporibus quia nam sint minus ea soluta atque ad earum molestias pariatur, consectetur dicta molestiae! Laboriosam, nulla sapiente!
+                            Impedit maxime enim quasi maiores vero est? Assumenda dicta rem facere provident esse! A distinctio, assumenda delectus vel neque vero illo laborum totam, magnam nostrum consequatur, voluptatibus repellendus quo cumque.
+                            Ipsam aliquam labore autem maxime, totam corrupti iure tempora incidunt reiciendis non vel harum fugiat natus earum quos ullam voluptatum suscipit tempore dolores ipsa! Enim corrupti dolor voluptatem suscipit reprehenderit!
+                            Odit id explicabo odio quo fugit. Voluptates optio voluptatem dicta ipsa obcaecati quibusdam odio, nostrum beatae molestias aut facere cum quae voluptatum. Blanditiis odit officia in commodi nobis modi eius?
+                            Soluta neque reiciendis praesentium recusandae nisi temporibus asperiores porro expedita odit animi numquam incidunt debitis eos cumque, omnis voluptate eaque nemo similique! Quis rerum aliquid, inventore veniam possimus labore sint.
+                            Voluptatibus pariatur doloremque aspernatur quia qui repudiandae placeat libero hic sequi repellat beatae recusandae voluptate enim in, eius obcaecati rerum quisquam quaerat. Saepe quo dolorum, enim numquam quasi aspernatur veritatis.
+                            Distinctio fugit ullam ducimus nisi, commodi aut libero qui quas, sed quisquam hic rerum perferendis quae aperiam! Eaque, perferendis quibusdam similique ipsam tempore, eos ut asperiores deleniti quasi necessitatibus quae?
+                            Laborum assumenda nesciunt reiciendis debitis impedit sequi labore possimus deleniti esse, enim earum saepe nulla necessitatibus obcaecati perferendis, quis eveniet, error maxime non dolor a voluptatibus cupiditate minus. Magnam, nesciunt.
+                            Vel et voluptatem veniam officia tenetur quasi sequi aliquam, minima laudantium, eos pariatur totam repellat nemo natus ut excepturi cumque? Consequatur laborum obcaecati vero architecto tenetur repudiandae, quae nulla cumque?
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container">
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="exampleFormControlTextarea1" rows="1" autocomplete="off">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary my-2">Enviar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+    <script src="../js/pruebas-funcionamiento/message.js"></script>
+    <script src="../js/pruebas-funcionamiento/logueded.js"></script>
+</body>
+</html>
