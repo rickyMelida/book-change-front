@@ -9,8 +9,12 @@ function noUser(logueado) {
     const messageItem = document.querySelector('#messages-item').parentNode;
     
     if(logueado){
+        if(document.title == 'Change Books')
+            profileItem.setAttribute('href', './login.html')
+        else
+        profileItem.setAttribute('href', '../login.html')
+
         profileItem.setAttribute('title', 'Iniciar Sesión');
-        profileItem.setAttribute('href', './login.html')
         profileOption.classList.add('disabled');
         profileItem.parentElement.classList.remove('mx-1');
         myBooks.classList.add('d-none');
