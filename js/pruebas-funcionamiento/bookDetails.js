@@ -4,6 +4,9 @@ const bookImage = document.querySelectorAll('.book-image');
 const bookTitle = document.querySelector('.book-title');
 const booAuthor = document.querySelectorAll('.book-author');
 const bookPages = document.querySelector('.book-pages');
+var container = document.querySelector("body .container");
+
+
 
 for(let i=0;i<booAuthor.length;i++)
     booAuthor[i].innerHTML = bookData.author;
