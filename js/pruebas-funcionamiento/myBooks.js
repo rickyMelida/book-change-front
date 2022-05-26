@@ -198,120 +198,140 @@ document.addEventListener('click', (e)=>{
     }
 })
 
-
-
 function createCardsBooks(data, container) {
-
-    const principalCol = document.createElement('div');
-    principalCol.classList.add('col-md-4', 'my-3');
-    
-
-    const card = document.createElement('div');
-    card.classList.add('card');
-    card.style.width = '20rem';
-    card.setAttribute('id',data.id);
-
-    const imageCard = document.createElement('img');
-    imageCard.setAttribute('src', data.imgPath);
-    imageCard.setAttribute('width', '100');
-    imageCard.setAttribute('height', '350');
-    imageCard.classList.add('card-img-top');
-
-    const cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
-
-    const cardTitle = document.createElement('h5');
-    cardTitle.classList.add('card-title', 'mb-5');  
-    cardTitle.style.maxHeight = '24px'
+    const principalCol = document.createElement("div");
+    principalCol.classList.add(
+      "col-10",
+      "offset-2",
+      "col-sm-9",
+      "offset-sm-3",
+      "col-md-5",
+      "offset-md-1",
+      "col-xl-3",
+      "offset-xl-0",
+      "py-3"
+    );
+  
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.style.width = "18rem";
+    card.setAttribute("id", data.id);
+  
+    const imageCard = document.createElement("img");
+    imageCard.setAttribute("src", data.imgPath);
+    imageCard.setAttribute("height", "350");
+    imageCard.classList.add("card-img-top");
+  
+    const cardBody = document.createElement("div");
+    cardBody.classList.add("card-body");
+  
+    const cardTitle = document.createElement("h5");
+    cardTitle.classList.add("card-title", "mb-5");
+    cardTitle.style.maxHeight = "24px";
     cardTitle.innerHTML = data.title;
-
-    const lineHorizontal = document.createElement('hr');
-    lineHorizontal.classList.add('mx-2');
-
-    const cardText = document.createElement('p');
-    cardText.classList.add('card-text');
-
-    const stateContainer = document.createElement('div');
-    stateContainer.classList.add('pb-2');
-    
-    const strongState = document.createElement('strong');
+  
+    const lineHorizontal = document.createElement("hr");
+    lineHorizontal.classList.add("mx-2");
+  
+    const cardText = document.createElement("p");
+    cardText.classList.add("card-text");
+  
+    const stateContainer = document.createElement("div");
+    stateContainer.classList.add("pb-2");
+  
+    const strongState = document.createElement("strong");
     strongState.innerHTML = "Estado: ";
-
-    const forToContainer = document.createElement('div');
-    forToContainer.classList.add('py-2');
-
-    const strongForTo = document.createElement('strong');
-    strongForTo.innerHTML = 'Para: ';
-
-    const strongPrice = document.createElement('strong');
-    strongPrice.classList.add('text-success', 'd-block');
+  
+    const forToContainer = document.createElement("div");
+    forToContainer.classList.add("py-2");
+  
+    const strongForTo = document.createElement("strong");
+    strongForTo.innerHTML = "Para: ";
+  
+    const strongPrice = document.createElement("strong");
+    strongPrice.classList.add("text-success", "d-block");
     //strongPrice.innerHTML = data.price;
-
-    const buttonContact = document.createElement('button');
-    buttonContact.setAttribute('type', 'button');
-    buttonContact.classList.add('btn', 'btn-primary', 'btn-lg', 'btn-block', 'w-100');
-    buttonContact.innerHTML = 'Contactar';
-
-    const sectionDetail = document.createElement('section');
-    sectionDetail.classList.add('mt-4');
-
-    const avatarImage = document.createElement('img');
-    avatarImage.setAttribute('src', '../img/avatar.svg');
-    avatarImage.setAttribute('width', '10');
-    avatarImage.setAttribute('alt', 'Avatar');
-    avatarImage.classList.add('avatar');
-
-    const userCite = document.createElement('cite');
-    userCite.classList.add('text-primary', 'pt-3');
-    userCite.innerHTML = 'Johan Doe';
-
-    const bookmarkContainer = document.createElement('span');
-    bookmarkContainer.classList.add('text-dark', 'float-end', 'pt-2');
-
-    const imgBookmark = document.createElement('img');
-    imgBookmark.setAttribute('src', '../img/bookmark.png');
-    imgBookmark.setAttribute('width', '35');
-    imgBookmark.setAttribute('title', 'Agregar como favorito');
-    
-    
+  
+    const buttonContact = document.createElement("button");
+    buttonContact.setAttribute("type", "button");
+    buttonContact.classList.add(
+      "btn",
+      "btn-primary",
+      "btn-lg",
+      "btn-block",
+      "w-100"
+    );
+    buttonContact.innerHTML = "Contactar";
+  
+    const sectionDetail = document.createElement("section");
+    sectionDetail.classList.add("mt-4");
+  
+    const avatarImage = document.createElement("img");
+    avatarImage.setAttribute("src", "../img/avatar.svg");
+    avatarImage.setAttribute("width", "10");
+    avatarImage.setAttribute("alt", "Avatar");
+    avatarImage.classList.add("avatar");
+  
+    const userCite = document.createElement("cite");
+    userCite.classList.add("text-primary", "pt-2", "d-block", "w-50");
+    userCite.innerHTML = "Johan Doe";
+  
+    const bookmarkContainer = document.createElement("span");
+    bookmarkContainer.classList.add("text-dark", "float-end", "pt-2");
+    bookmarkContainer.setAttribute("id", "bookmarkContainer");
+  
+    const imgBookmark = document.createElement("img");
+    imgBookmark.setAttribute("src", "../img/bookmark.png");
+    imgBookmark.setAttribute("width", "35");
+    imgBookmark.setAttribute("title", "Agregar como favorito");
+  
     container.appendChild(principalCol);
-
+  
     principalCol.appendChild(card);
     card.appendChild(imageCard);
     card.appendChild(cardBody);
-
+  
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(lineHorizontal);
     cardBody.appendChild(cardText);
     cardBody.appendChild(buttonContact);
     cardBody.appendChild(sectionDetail);
-
+  
     cardText.appendChild(stateContainer);
     cardText.appendChild(forToContainer);
     cardText.appendChild(strongPrice);
-
+  
     stateContainer.appendChild(strongState);
     stateContainer.append(data.state);
     forToContainer.appendChild(strongForTo);
     forToContainer.append(data.by);
-
+  
     sectionDetail.appendChild(avatarImage);
     sectionDetail.appendChild(userCite);
     sectionDetail.appendChild(bookmarkContainer);
-
+  
     bookmarkContainer.appendChild(imgBookmark);
-    
 }
 
 function addNewBookCard(container) {
 
     const principalCol = document.createElement('div');
-    principalCol.classList.add('col-md-4', 'my-3');
+    principalCol.classList.add(
+        "col-10",
+        "offset-2",
+        "col-sm-9",
+        "offset-sm-3",
+        "col-md-5",
+        "offset-md-1",
+        "col-xl-3",
+        "offset-xl-0",
+        "py-3"
+      );
     
     
     const card = document.createElement('div');
     card.classList.add('card', 'card-add-book', 'border-0', 'bg-light');
-    card.style.width = '20rem';
+    card.style.width = '18rem';
     card.setAttribute('title','Agregar nuevo libro');
     
     const imageCard = document.createElement('img');
