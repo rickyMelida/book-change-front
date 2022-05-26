@@ -175,14 +175,21 @@
 const fieldSearch = document.querySelector('#search');
 const btnSearch = document.querySelector('#btn-search');
 
+var searchResult = document.querySelector('#search-result');
 
 fieldSearch.addEventListener('keyup', ()=>{
     console.log('sale')
 });
 
 
-fieldSearch.addEventListener('focus', ()=>{
-    console.log('hizo click')
+
+
+fieldSearch.addEventListener('focus', (e)=>{
+  searchResult.style.width = e.target.offsetWidth;
+  searchResult.style.marginRight = (window.innerWidth-(e.target.offsetWidth + e.target.offsetLeft)).toString() + 'px';
+
+  console.log(`El ancho del buscador es ${e.target.offsetWidth}`);
+  console.log(`El ancho del resultado es de ${searchResult.offsetWidth}`);
 });
 
 
