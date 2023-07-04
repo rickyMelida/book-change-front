@@ -190,9 +190,9 @@ const logued =
 
 document.addEventListener("DOMContentLoaded", () => {
   for (let i = 0; i <= 3; i++) {
-    createCardsBooks(myData.outstandingBooks[i], outstanding);
-    createCardsBooks(myData.recentBooks[i], recent);
-    createCardsBooks(myData.otherBooks[i], other);
+    createCardsBooks(myData.outstandingBooks[i], outstanding, i);
+    createCardsBooks(myData.recentBooks[i], recent, i*2);
+    createCardsBooks(myData.otherBooks[i], other, i*5);
     createCarouselImage(myData.recentBooks[i], carouselContainer, i);
   }
   clickAvatar();
@@ -212,6 +212,7 @@ function getBooks(e) {
   if (e.target.innerHTML == "Contactar" && !logued)
     window.location.href = "http://127.0.0.1:5500/login.html";
   else console.log("Aca envia el mensaje por whatsapp");
+
   if (e.target.innerHTML != "Contactar") {
     const arrayElements = e.path;
     const myCard = arrayElements.find((element) => element.className == "card");
@@ -219,8 +220,13 @@ function getBooks(e) {
     const data = myData[myCollection[collection]];
     const result = data.find((element) => element.id == myCard.id);
 
+    //Vemos el perfil del usuario
+  if(!e.target.querySelector('.users'))
+    console.log('Genial')
+  else console.log('Fallaste')
+
     localStorage.setItem("bookData", JSON.stringify(result));
-    window.location.href = "http://127.0.0.1:5500/views/details.html";
+    //window.location.href = "http://127.0.0.1:5500/views/details.html";
   }
 }
 
@@ -244,7 +250,7 @@ function clickAvatar() {
   }
 }
 
-function createCardsBooks(data, container) {
+function createCardsBooks(data, container, userId) {
   const principalCol = document.createElement("div");
   principalCol.classList.add(
     "col-10",
@@ -319,8 +325,9 @@ function createCardsBooks(data, container) {
   avatarImage.classList.add("avatar");
 
   const userCite = document.createElement("cite");
-  userCite.classList.add("text-primary", "pt-2", "d-block", "w-50");
+  userCite.classList.add("text-primary", "pt-2", "d-block", "w-50", "users");
   userCite.innerHTML = "Johan Doe";
+  userCite.setAttribute('id', `user-${userId}`);
 
   const bookmarkContainer = document.createElement("span");
   bookmarkContainer.classList.add("text-dark", "float-end", "pt-2");
