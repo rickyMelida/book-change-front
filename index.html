@@ -15,11 +15,12 @@
   </head>
 
   <body>
+    <!-- ── Navbar ──────────────────────────────────────────── -->
     <header id="home">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" title="Inicio">
-            <img src="./img/book.png" alt="" width="50" />
+            <img src="./img/book.png" alt="Change Books" width="46" />
           </a>
           <button
             class="navbar-toggler"
@@ -35,13 +36,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  id="home-item"
-                  href=""
-                  >Home</a
-                >
+                <a class="nav-link active" aria-current="page" id="home-item" href="">Inicio</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -51,48 +46,19 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                >
-                  Libros
-                </a>
+                >Libros</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      id="highlighted-item"
-                      href="#destacados"
-                      >Destacados</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" id="recent-item" href="#recientes"
-                      >Recientes</a
-                    >
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a class="dropdown-item" id="others-item" href="#otros"
-                      >Otros</a
-                    >
-                  </li>
+                  <li><a class="dropdown-item" id="highlighted-item" href="#destacados">Destacados</a></li>
+                  <li><a class="dropdown-item" id="recent-item" href="#recientes">Recientes</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" id="others-item" href="#otros">Otros</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  id="contacts-item"
-                  href="./views/contacts.html"
-                  >Contactos</a
-                >
+                <a class="nav-link" id="contacts-item" href="./views/contacts.html">Contactos</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  id="my-book-item"
-                  href="./views/myBooks.html"
-                  >Mis Libros</a
-                >
+                <a class="nav-link" id="my-book-item" href="./views/myBooks.html">Mis Libros</a>
               </li>
             </ul>
             <form class="d-flex">
@@ -100,48 +66,29 @@
                 class="form-control me-2"
                 type="search"
                 id="search"
-                placeholder="Buscar"
-                aria-label="Search"
+                placeholder="Buscar libros..."
+                aria-label="Buscar"
               />
-              <button
-                class="btn btn-outline-success"
-                type="button"
-                id="btn-search"
-              >
-                Buscar
-              </button>
+              <button class="btn btn-outline-success" type="button" id="btn-search">Buscar</button>
             </form>
             <span class="mx-3">
-              <a
-                href="./views/favorites.html"
-                id="favorites-item"
-                title="Favoritos"
-              >
-                <img src="./img/wish_list.svg" width="30" alt="" />
+              <a href="./views/favorites.html" id="favorites-item" title="Favoritos">
+                <img src="./img/wish_list.svg" width="26" alt="Favoritos" />
               </a>
             </span>
             <span class="mx-3">
-              <a
-                href="./views/messages.html"
-                id="messages-item"
-                title="Mensajes"
-              >
-                <img src="./img/message.svg" width="30" alt="" />
+              <a href="./views/messages.html" id="messages-item" title="Mensajes">
+                <img src="./img/message.svg" width="26" alt="Mensajes" />
               </a>
             </span>
-            <span class="mx-1 dropdown">
-              <div class="dropdown" style="float: left">
-                <a
-                  href=""
-                  class="dropbtn"
-                  id="my-profile-item"
-                  title="Mi Perfil"
-                >
-                  <img src="./img/user.svg" width="30" alt="" />
+            <span class="mx-1">
+              <div class="dropdown">
+                <a href="" class="dropbtn" id="my-profile-item" title="Mi Perfil">
+                  <img src="./img/user.svg" width="26" alt="Perfil" />
                 </a>
                 <div class="dropdown-content" id="profile-option">
                   <a href="#">Mi Perfil</a>
-                  <a href="#">Cerrar Sesion</a>
+                  <a href="#">Cerrar Sesión</a>
                 </div>
               </div>
             </span>
@@ -150,22 +97,15 @@
       </nav>
     </header>
 
-    <!--div class="position-absolute border float-right" id="search-result">
-        <div class="media">
-            Will you do the same for me?
-          </div>
-    </div-->
-
-    <div class="container-fluid">
-      <!------------------------------------- Boton de ir a Inicio --------------------------->
-      <div class="row">
-        <div class="position-fixed bottom-0 mb-5" id="button-up">
-          <span> ^</span>
-        </div>
+    <div class="container-fluid px-3 px-md-4">
+      <!-- Botón volver arriba -->
+      <div class="position-fixed bottom-0 end-0 mb-4 me-4" style="z-index:999">
+        <div id="button-up"><span>↑</span></div>
       </div>
-      <!------------------------------------- Slider Principal --------------------------->
-      <div class="row mb-5">
-        <div class="col-md-12">
+
+      <!-- ── Carousel principal ──────────────────────────── -->
+      <div class="row mb-4">
+        <div class="col-12">
           <div
             id="carouselExampleControls"
             class="carousel slide"
@@ -178,140 +118,71 @@
               data-bs-target="#carouselExampleControls"
               data-bs-slide="prev"
             >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
             </button>
-
             <button
               class="carousel-control-next"
               type="button"
               data-bs-target="#carouselExampleControls"
               data-bs-slide="next"
             >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
             </button>
           </div>
         </div>
       </div>
 
-      <!------------------------------------- Lo mas destacado --------------------------->
-      <div class="row bg-light" id="destacado">
-        <div class="mt-2">
-          <div class="row">
-            <div class="col-6 offset-0 col-md-3 offset-md-1 pt-2">
-              <h5 id="recientes">Lo mas destacado</h5>
-            </div>
-            <div class="col-4 offset-2 col-md-2 offset-md-6">
-              <span class="text-right view-all">
-                <a href="./views/unauthorized.html" class="text-dark h6">
-                  ver todos ></a
-                >
-              </span>
-            </div>
-          </div>
+      <!-- ── Destacados ──────────────────────────────────── -->
+      <div class="books-section row page-animate" id="destacado">
+        <div class="col-12 d-flex justify-content-between align-items-center mb-3">
+          <h5 class="section-title mb-0" id="destacados">Lo más destacado</h5>
+          <a href="./views/unauthorized.html" class="view-all-link">Ver todos →</a>
         </div>
+        <hr class="col-12 line-horizontal mb-3">
       </div>
 
-      <!------------------------------------- Lo mas reciente --------------------------->
-      <div class="row my-5 bg-light" id="reciente">
-        <div class="m-2">
-          <div class="row">
-            <div class="col-6 offset-0 col-md-3 offset-md-1 pt-2">
-              <h5 id="recientes">Lo mas reciente</h5>
-            </div>
-            <div class="col-4 offset-2 col-md-2 offset-md-6">
-              <span class="text-right view-all">
-                <a href="./views/unauthorized.html" class="text-dark h6">
-                  ver todos ></a
-                >
-              </span>
-            </div>
-          </div>
+      <!-- ── Recientes ───────────────────────────────────── -->
+      <div class="books-section books-section-alt row mt-3 page-animate" id="reciente">
+        <div class="col-12 d-flex justify-content-between align-items-center mb-3">
+          <h5 class="section-title mb-0" id="recientes">Lo más reciente</h5>
+          <a href="./views/unauthorized.html" class="view-all-link">Ver todos →</a>
         </div>
+        <hr class="col-12 line-horizontal mb-3">
       </div>
 
-      <!------------------------------------- Otros --------------------------->
-      <div class="row my-5 bg-light" id="otro">
-        <div class="m-2">
-          <div class="row">
-            <div class="col-6 offset-0 col-md-3 offset-md-1 pt-2">
-              <h5 id="recientes">Otros libros</h5>
-            </div>
-            <div class="col-4 offset-2 col-md-2 offset-md-6">
-              <span class="text-right view-all">
-                <a href="./views/unauthorized.html" class="text-dark h6">
-                  ver todos ></a
-                >
-              </span>
-            </div>
-          </div>
+      <!-- ── Otros ───────────────────────────────────────── -->
+      <div class="books-section row mt-3 page-animate" id="otro">
+        <div class="col-12 d-flex justify-content-between align-items-center mb-3">
+          <h5 class="section-title mb-0" id="otros">Otros libros</h5>
+          <a href="./views/unauthorized.html" class="view-all-link">Ver todos →</a>
         </div>
+        <hr class="col-12 line-horizontal mb-3">
       </div>
 
-      <!------------------------------------- Paginacion --------------------------->
-      <!--div class="row">
-            <div class="col-md-12">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                            <a class="page-link">Previous</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div-->
-
-      <!------------------------------------- Footer --------------------------->
-      <div class="row">
-        <div class="col-md-12">
+      <!-- ── Footer ─────────────────────────────────────── -->
+      <div class="row mt-4">
+        <div class="col-12">
           <div class="container">
-            <footer
-              class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-            >
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
               <div class="col-md-4 d-flex align-items-center">
-                <a
-                  href="/"
-                  class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
-                >
-                  <svg class="bi" width="30" height="24">
-                    <use xlink:href="#bootstrap" />
-                  </svg>
-                </a>
-                <span class="text-muted">&copy; 2021 Company, Inc</span>
+                <span class="text-muted">© 2024 Change Books</span>
               </div>
-
-              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3">
-                  <a class="text-muted" href="#">
-                    <img src="./img/facebook.svg" alt="" width="24" srcset="" />
+              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex gap-3">
+                <li>
+                  <a class="text-muted" href="#" title="Facebook">
+                    <img src="./img/facebook.svg" alt="Facebook" width="22" />
                   </a>
                 </li>
-                <li class="ms-3">
-                  <a class="text-muted" href="#">
-                    <img
-                      src="./img/instagram.svg"
-                      alt=""
-                      width="24"
-                      srcset=""
-                    />
+                <li>
+                  <a class="text-muted" href="#" title="Instagram">
+                    <img src="./img/instagram.svg" alt="Instagram" width="22" />
                   </a>
                 </li>
-                <li class="ms-3">
-                  <a class="text-muted" href="#">
-                    <img src="./img/twitter.svg" alt="" width="24" srcset="" />
+                <li>
+                  <a class="text-muted" href="#" title="Twitter">
+                    <img src="./img/twitter.svg" alt="Twitter" width="22" />
                   </a>
                 </li>
               </ul>
@@ -321,12 +192,6 @@
       </div>
     </div>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

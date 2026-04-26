@@ -1,3 +1,30 @@
+/* ── varifyEmail.css — Verificación de correo ─────── */
+
 .img-email-verification {
-    color: blue;
+  display: block;
+  margin: 2rem auto;
+  max-width: 180px;
+  opacity: .85;
+  filter: drop-shadow(0 8px 16px rgba(26,107,74,.2));
+  animation: floatBook 4s ease-in-out infinite;
+}
+
+.verify-email-page {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.verify-email-page h2 {
+  font-family: var(--font-serif);
+  color: var(--clr-primary);
+}
+
+.verify-email-page p {
+  color: var(--clr-text-muted);
+  max-width: 420px;
 }
